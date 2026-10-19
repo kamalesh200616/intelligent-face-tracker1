@@ -1,0 +1,42 @@
+
+
+{
+  "summary": {
+    "total_unique_visitors": 1,
+    "total_entry_events": 2,
+    "total_exit_events": 1,
+    "currently_present_estimate": 1,
+    "registered_visitor_ids": [
+      "face_0001"
+    ]
+  },
+  "events": [
+    {
+      "event_id": "evt_entry_2b44f834",
+      "face_id": "face_0001",
+      "track_id": 2,
+      "event_type": "entry",
+      "timestamp": "2026-10-17T02:53:58.846768+00:00",
+      "confidence": 0.7559731006622314,
+      "image_path": "logs\\entries\\2026-10-17\\face_0001_track2_025358_9634.jpg"
+    },
+    {
+      "event_id": "evt_exit_b33ba551",
+      "face_id": "face_0001",
+      "track_id": 1,
+      "event_type": "exit",
+      "timestamp": "2026-10-17T02:53:58.427594+00:00",
+      "confidence": 0.8180999755859375,
+      "image_path": "logs\\exits\\2026-10-17\\face_0001_track1_025358_4285.jpg"
+    },
+    {
+      "event_id": "evt_entry_07f6eb0a",
+      "face_id": "face_0001",
+      "track_id": 1,
+      "event_type": "entry",
+      "timestamp": "2026-10-17T02:53:55.030749+00:00",
+      "confidence": 0.7581473588943481,
+      "image_path": "logs\\entries\\2026-10-17\\face_0001_track1_025355_1124.jpg"
+    }
+  ]
+}

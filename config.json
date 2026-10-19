@@ -1,0 +1,55 @@
+{
+  "system": {
+    "app_name": "Intelligent Face Tracker with Auto-Registration and Visitor Counting",
+    "version": "1.0.0",
+    "environment": "production"
+  },
+  "video": {
+    "source_type": "file",
+    "file_path": "data/sample_video.mp4",
+    "rtsp_url": "",
+    "rtsp_env_var": "RTSP_STREAM_URL",
+    "reconnect_delay_seconds": 2.0,
+    "max_reconnect_attempts": 5,
+    "target_width": 1280,
+    "target_height": 720
+  },
+  "detection": {
+    "model_type": "yolov8_face",
+    "model_path": "models/yolov8n-face.pt",
+    "confidence_threshold": 0.60,
+    "nms_threshold": 0.45,
+    "frame_skip": 2,
+    "device": "cpu"
+  },
+  "recognition": {
+    "model_type": "arcface",
+    "model_path": "models/arcface_sota.onnx",
+    "embedding_dim": 512,
+    "similarity_threshold": 0.52,
+    "min_face_size": [40, 40],
+    "blur_threshold": 40.0,
+    "l2_normalize": true
+  },
+  "tracking": {
+    "tracker_type": "bytetrack",
+    "iou_threshold": 0.25,
+    "min_hits_to_confirm": 3,
+    "track_lost_timeout_seconds": 2.0,
+    "max_lost_frames": 60
+  },
+  "storage": {
+    "database_path": "data/visitor_tracker.db",
+    "entries_dir": "logs/entries",
+    "exits_dir": "logs/exits",
+    "log_file": "logs/events.log",
+    "save_crops": true,
+    "crop_margin_ratio": 0.15
+  },
+  "logging": {
+    "level": "INFO",
+    "console_output": true,
+    "file_output": true,
+    "log_format": "%(asctime)s [%(levelname)s] [%(name)s] %(message)s"
+  }
+}
